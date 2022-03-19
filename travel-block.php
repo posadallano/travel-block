@@ -23,12 +23,10 @@ function techiepress_acf_travel_it_block() {
             'name'              => 'travelitblock',
             'title'             => __('Travel Itinerary Block'),
             'description'       => __('Travel Itinerary Block to add important information for travellers'),
-            'render_callback'   => function() {
-               echo '<h3>Our travel block</h3>';
-            },
+            'render_template'   => plugin_dir_path( __FILE__ ) .'template-parts/blocks/travel-block.php',
             'category'          => 'media',
             'icon'              => 'format-gallery',
-            'keywords'          => array( 'Travel', 'Itinerary', 'Techiepress' ),          
+            'keywords'          => array( 'travel', 'itinerary' ),          
         ) );
     }
 }
