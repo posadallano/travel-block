@@ -32,7 +32,7 @@ $overnight           = get_field('overnight');
 
  <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <span class="day"><?php echo esc_attr($daytime); ?></span>
-    <?php print_r( $image ); ?>
+    <?php echo wp_get_attachment_image( $image['id'], 'full' )?>
 
     <div class="content-info">
         <p><?php echo esc_attr($days_activity_title); ?></p>

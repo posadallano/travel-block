@@ -26,7 +26,10 @@ function techiepress_acf_travel_it_block() {
             'render_template'   => plugin_dir_path( __FILE__ ) .'template-parts/blocks/travel-block.php',
             'category'          => 'media',
             'icon'              => 'format-gallery',
-            'keywords'          => array( 'travel', 'itinerary' ),          
+            'keywords'          => array( 'travel', 'itinerary' ),     
+            'enqueue_assets'    => function() {
+                wp_enqueue_style( 'travel-it-block', plugin_dir_url( __FILE__ ) . 'assets/css/style.css', '', '1.0.0', 'all' );
+            }         
         ) );
     }
 }
